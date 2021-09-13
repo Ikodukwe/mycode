@@ -6,5 +6,5 @@ print("The last item in the list (state): " + my_list[2])
 # I did as the instruction guided
 
 new_list = [ 5060, "80", 55, "10.0.0.1", "10.20.30.1", "ssh" ]
-print("The IP addresses are " +  new_list[3] + " and " + new_list[4])
+print(f"The IP addresses are {new_list[3]} and {new_list[4]}")
 # The above is my solution, but there is abetter way to do it
