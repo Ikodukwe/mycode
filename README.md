@@ -1,5 +1,5 @@
 # mycode
-All the code for the  NAPYA course
+All the code for the Alta3  NAPYA course
 
 # mycode (Project Title)
 
