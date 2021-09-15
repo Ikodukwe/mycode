@@ -6,15 +6,19 @@ from pprint import pprint as pp # part of the standard library
 ## define some constants
 NASAAPI = 'https://api.nasa.gov/planetary/apod?' # this is our API to call
 MYKEY = 'api_key=GUi3WOIHrksyfld4sz503GhgZlL0l9qymu4sMKTm' ## this is our api key
+date_desired  = str(input("Please provide a date(YYYY-MM-DD ): "))
+MYDATE = f'date={date_desired}&'
+
 
 ## pretty print json
 def main():
     """run-time code"""
-    nasaapiobj = requests.get(NASAAPI + MYKEY) # call the webservice
+    nasaapiobj = requests.get(NASAAPI + MYDATE + MYKEY) # call the webservice
     nasaread = nasaapiobj.json() # parse the JSON blob returned
 
     # Show converted json
-    print(nasaread) # show converted JSON without pprint
+    print(nasaread['date'] + "\n" + nasaread['explanation'] + "\n" + nasaread['title'])
+
     input('\nThis is converted json. Press ENTER to continue.') # pause for enter
 
     # Show Pretty Print json
