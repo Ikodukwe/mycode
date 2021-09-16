@@ -1,0 +1,18 @@
+- name: Thursday challenge
+  hosts: renamed, !taz
+  connection: ssh
+  gather_facts: no
+  become: true
+
+  tasks:
+          - name: Ensure group "funkytown" exist
+            ansible.builtin.group:
+                    name: funkytown
+                    state: present
+            
+          - name: make a user
+            ansible.builtin.user:
+                    name: IK
+                    group: funkytown
+
+       
