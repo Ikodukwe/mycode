@@ -61,7 +61,7 @@
   # notice how Python methods use dot notation and Jinja uses pipes
   - name: Python way of capitalizing a string
     debug:
-      msg: "{{ mytest_string.capitalize() }}"
+      msg: "{{ mytest_string.capitalize() }} and {{ mytest_string.upper() }}"
 
 
   # Sometimes we need to use Python AND Jinja.
